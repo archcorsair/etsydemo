@@ -13,7 +13,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 gem 'bootstrap-sass', '~> 3.3.5'
 gem "paperclip", "~> 4.3"
 
-group :products do
+group :production do
 	gem 'pg'
 	gem 'rails_12factor'
 end
