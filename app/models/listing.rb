@@ -1,5 +1,5 @@
 class Listing < ActiveRecord::Base
-	if Rails.evn.development?
+	if Rails.env.development?
 		has_attached_file :image, :styles => { :medium => "200x", :thumb => "100x100>" }, :default_url => "default.png"
 	else
 		has_attached_file :image, :styles => { :medium => "200x", :thumb => "100x100>" }, :default_url => "default.png",
