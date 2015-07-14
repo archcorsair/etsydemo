@@ -46,6 +46,10 @@ class ListingsController < ApplicationController
         )
     end
 
+    #debug start
+    puts "***************** Token is #{token.inspect} *****************"
+    #debug end
+
     current_user.recipient = recipient.id
     current_user.save
 
@@ -92,7 +96,7 @@ class ListingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def listing_params
-      params.require(:listing).permit(:name, :description, :price, :image)
+      params.require(:listing).permit(:name, :category_id, :description, :price, :image)
     end
 
     def check_user
